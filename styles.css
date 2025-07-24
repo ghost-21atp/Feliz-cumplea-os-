@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   height: 100vh;
@@ -90,7 +89,6 @@ body {
   display: block;
 }
 
-/* Fotos en corazones */
 .photo-container {
   position: absolute;
   width: 100%;
@@ -103,19 +101,18 @@ body {
 }
 
 .dog-heart {
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid pink;
   box-shadow: 0 0 10px #ff99cc;
 }
 
-/* Dancing gif */
 .dancing-gif {
   position: absolute;
-  width: 120px;
-  top: 70%;
+  width: 85px;
+  top: 75%;
 }
 
 .left {
