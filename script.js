@@ -2,11 +2,14 @@ function openHeart() {
   const container = document.querySelector('.container');
   container.classList.toggle('open');
 
-  // Reproducir música
+  // Reproducir audio si no está sonando
   const audio = document.getElementById('birthdaySong');
-  audio.play().catch((e) => {
-    console.log("Autoplay bloqueado, el usuario debe interactuar primero.");
-  });
+
+  if (audio.paused) {
+    audio.play().catch((error) => {
+      console.warn("🎵 El navegador bloqueó el audio. Intenta hacer clic de nuevo o permitir sonido.");
+    });
+  }
 
   // Lanzar confeti
   confetti({
