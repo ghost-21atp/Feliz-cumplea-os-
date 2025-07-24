@@ -1,0 +1,127 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffe6f0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  transform: rotate(-45deg);
+  transition: transform 1s ease;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:after {
+  left: 50px;
+  top: 0;
+}
+
+.name {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #e6005c;
+  display: none;
+}
+
+.open .heart {
+  transform: scale(1.5) rotate(0deg);
+  background: transparent;
+}
+
+.open .heart:before,
+.open .heart:after {
+  background: transparent;
+}
+
+.open .name {
+  display: none;
+}
+
+.open .message {
+  display: block;
+}
+
+/* Fotos en corazones */
+.photo-container {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.dog-heart {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid pink;
+  box-shadow: 0 0 10px #ff99cc;
+}
+
+/* Dancing gif */
+.dancing-gif {
+  position: absolute;
+  width: 120px;
+  top: 70%;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
