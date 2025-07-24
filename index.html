@@ -7,33 +7,50 @@
 </head>
 <body>
 
-<!-- Música -->
-<audio id="birthdaySong" src="linda.mp3"></audio>
+  <!-- Música -->
+  <audio id="birthdaySong" src="linda.mp3"></audio>
+  <button id="playButton" onclick="playAudioManually()" style="
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff99cc;
+    cursor: pointer;
+    z-index: 10;
+  ">🔊 Activar sonido</button>
 
-<!-- Corazón principal -->
-<div class="container" onclick="openHeart()">
-  <div class="heart"></div>
-  <div class="name">💖 Jenara 💖</div>
-  <div class="message">🎉 ¡Feliz Cumpleaños! 🎉</div>
-</div>
+  <!-- Corazón principal -->
+  <div class="container" onclick="openHeart()">
+    <div class="heart"></div>
+    <div class="name">💖 Jenara 💖</div>
+    <div class="message">🎉 ¡Feliz Cumpleaños! 🎉</div>
+  </div>
 
-<!-- Fotos del perro en corazones -->
-<div class="photo-container">
-  <img src="Perro1.jpg" class="dog-heart" alt="Perro 1">
-  <img src="Perro2.jpg" class="dog-heart" alt="Perro 2">
-  <img src="Perro3.jpg" class="dog-heart" alt="Perro 3">
-  <img src="Perro4.jpg" class="dog-heart" alt="Perro 4">
-</div>
+  <!-- Fotos del perro en corazones -->
+  <div class="photo-container">
+    <img src="Perro1.jpg" class="dog-heart" alt="Perro 1">
+    <img src="Perro2.jpg" class="dog-heart" alt="Perro 2">
+    <img src="Perro3.jpg" class="dog-heart" alt="Perro 3">
+    <img src="Perro4.jpg" class="dog-heart" alt="Perro 4">
+  </div>
 
-<!-- GIF de los perritos bailando -->
-<img src="danceDogs.gif" class="dancing-gif left" alt="Perros bailando">
-<img src="danceDogs.gif" class="dancing-gif right" alt="Perros bailando">
+  <!-- GIF de los perritos bailando -->
+  <img src="danceDogs.gif" class="dancing-gif left" alt="Perros bailando">
+  <img src="danceDogs.gif" class="dancing-gif right" alt="Perros bailando">
 
-<!-- Confeti -->
-<canvas id="confetti-canvas"></canvas>
+  <!-- Confeti -->
+  <canvas id="confetti-canvas"></canvas>
 
-<!-- Scripts -->
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>
