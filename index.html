@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Feliz Cumpleaños!</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #ffdee9;
+      background: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      cursor: pointer;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background: red;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      transform: rotate(-45deg);
+      transition: transform 1s ease;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+
+    .name {
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .message {
+      position: absolute;
+      top: 130px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      color: #e6005c;
+      display: none;
+    }
+
+    .open .heart {
+      transform: scale(1.5) rotate(0deg);
+      background: transparent;
+    }
+
+    .open .heart:before,
+    .open .heart:after {
+      background: transparent;
+    }
+
+    .open .name {
+      display: none;
+    }
+
+    .open .message {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" onclick="openHeart()">
+    <div class="heart"></div>
+    <div class="name">💖 María 💖</div>
+    <div class="message">🎉 ¡Feliz Cumpleaños! 🎉</div>
+  </div>
+
+  <script>
+    function openHeart() {
+      const container = document.querySelector('.container');
+      container.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
