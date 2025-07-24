@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,28 +7,32 @@
 </head>
 <body>
 
-<audio id="birthdaySong" src="audio/linda.mp3"></audio>
+<!-- Música -->
+<audio id="birthdaySong" src="linda.mp3"></audio>
 
+<!-- Corazón interactivo -->
 <div class="container" onclick="openHeart()">
   <div class="heart"></div>
   <div class="name">💖 Jenara 💖</div>
   <div class="message">🎉 ¡Feliz Cumpleaños! 🎉</div>
 </div>
 
-<!-- Perros en corazones -->
+<!-- Fotos del perro en corazones -->
 <div class="photo-container">
-  <img src="img/Perro1.jpg" class="dog-heart">
-  <img src="img/Perro2.jpg" class="dog-heart">
-  <img src="img/Perro3.jpg" class="dog-heart">
-  <img src="img/Perro4.jpg" class="dog-heart">
+  <img src="Perro1.jpg" class="dog-heart" alt="Perro 1">
+  <img src="Perro2.jpg" class="dog-heart" alt="Perro 2">
+  <img src="Perro3.jpg" class="dog-heart" alt="Perro 3">
+  <img src="Perro4.jpg" class="dog-heart" alt="Perro 4">
 </div>
 
-<!-- GIF de perros bailando -->
-<img src="img/danceDogs.gif" class="dancing-gif left">
-<img src="img/danceDogs.gif" class="dancing-gif right">
+<!-- GIF de los perritos bailando -->
+<img src="danceDogs.gif" class="dancing-gif left" alt="Perros bailando">
+<img src="danceDogs.gif" class="dancing-gif right" alt="Perros bailando">
 
+<!-- Confeti -->
 <canvas id="confetti-canvas"></canvas>
 
+<!-- Scripts -->
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
