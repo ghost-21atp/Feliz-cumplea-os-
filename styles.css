@@ -1,32 +1,42 @@
+/* Fondo general */
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
-  background: #ffe6f0;
-  font-family: 'Arial', sans-serif;
+  background: linear-gradient(145deg, #ffe6f0, #ffccdd);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   overflow: hidden;
   position: relative;
 }
 
+/* Contenedor del corazón */
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   cursor: pointer;
   z-index: 2;
+  transition: transform 0.5s ease;
 }
 
+.container:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Corazón animado */
 .heart {
   width: 120px;
   height: 110px;
-  background: red;
+  background: #ff4d88;
   position: absolute;
   top: 90px;
   left: 90px;
   transform: rotate(-45deg);
-  transition: transform 1s ease;
+  transition: transform 1s ease, background 1s ease;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
 }
 
 .heart:before,
@@ -34,7 +44,7 @@ body {
   content: "";
   width: 120px;
   height: 110px;
-  background: red;
+  background: #ff4d88;
   border-radius: 50%;
   position: absolute;
 }
@@ -49,27 +59,38 @@ body {
   top: 0;
 }
 
+/* Nombre en el corazón */
 .name {
   position: absolute;
   top: 120px;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   color: white;
   z-index: 3;
   pointer-events: none;
+  text-shadow: 1px 1px 3px #c2185b;
 }
 
+/* Mensaje de cumpleaños */
 .message {
   position: absolute;
-  top: 130px;
+  top: 125px;
   left: 0;
   width: 100%;
   text-align: center;
   font-size: 26px;
   color: #e6005c;
+  font-weight: bold;
   display: none;
+  animation: fadeIn 1.2s ease-in-out forwards;
+  text-shadow: 1px 1px 5px white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .open .heart {
@@ -90,37 +111,48 @@ body {
   display: block;
 }
 
+/* Fotos del perro */
 .photo-container {
   position: absolute;
   width: 100%;
-  top: 10%;
+  top: 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   padding: 0 20px;
+  z-index: 1;
 }
 
 .dog-heart {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid pink;
-  box-shadow: 0 0 15px #ff99cc;
+  border: 5px solid #ff99cc;
+  box-shadow: 0 0 20px #ff66b2;
+  transition: transform 0.3s;
 }
 
+.dog-heart:hover {
+  transform: scale(1.1);
+}
+
+/* GIFs bailando */
 .dancing-gif {
   position: absolute;
-  width: 300px;
-  top: 75%;
+  width: 120px;
+  height: 140px;
+  object-fit: contain;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1;
 }
 
 .left {
-  left: 70px;
+  left: 15px;
 }
 
 .right {
-  right: 70px;
+  right: 15px;
 }
