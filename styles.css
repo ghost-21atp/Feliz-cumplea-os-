@@ -15,8 +15,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   cursor: pointer;
   z-index: 2;
   transition: transform 0.5s ease;
@@ -28,12 +28,12 @@ body {
 
 /* Corazón animado */
 .heart {
-  width: 120px;
-  height: 110px;
+  width: 140px;
+  height: 130px;
   background: #ff4d88;
   position: absolute;
   top: 90px;
-  left: 90px;
+  left: 80px;
   transform: rotate(-45deg);
   transition: transform 1s ease, background 1s ease;
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
@@ -42,20 +42,20 @@ body {
 .heart:before,
 .heart:after {
   content: "";
-  width: 120px;
-  height: 110px;
+  width: 140px;
+  height: 130px;
   background: #ff4d88;
   border-radius: 50%;
   position: absolute;
 }
 
 .heart:before {
-  top: -60px;
+  top: -70px;
   left: 0;
 }
 
 .heart:after {
-  left: 60px;
+  left: 70px;
   top: 0;
 }
 
@@ -125,24 +125,26 @@ body {
 }
 
 .dog-heart {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #ff99cc;
-  box-shadow: 0 0 20px #ff66b2;
-  transition: transform 0.3s;
+  border: 6px solid #ffaad4;
+  box-shadow: 0 0 25px #ff66b2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff0f5;
 }
 
 .dog-heart:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
+  box-shadow: 0 0 30px #ff3399;
 }
 
 /* GIFs bailando */
 .dancing-gif {
   position: absolute;
-  width: 120px;
-  height: 140px;
+  width: 150px;
+  height: 160px;
   object-fit: contain;
   top: 50%;
   transform: translateY(-50%);
@@ -150,9 +152,14 @@ body {
 }
 
 .left {
-  left: 15px;
+  left: 10px;
 }
 
 .right {
-  right: 15px;
+  right: 10px;
+}
+
+/* Ocultar botón de audio */
+#playButton {
+  display: none !important;
 }
