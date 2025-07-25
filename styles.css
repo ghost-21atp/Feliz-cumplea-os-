@@ -112,7 +112,7 @@ body {
 
 .dancing-gif {
   position: absolute;
-  width: 115px;
+  width: 300px;
   top: 75%;
   z-index: 1;
 }
